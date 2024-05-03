@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "SSAS_GlobalWeather", "SSAS_GlobalWeather\SSAS_GlobalWeather.dwproj", "{8CB5381A-9681-4829-BEFD-6B4B590F4449}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CB5381A-9681-4829-BEFD-6B4B590F4449}.Development|Default.ActiveCfg = Development
+		{8CB5381A-9681-4829-BEFD-6B4B590F4449}.Development|Default.Build.0 = Development
+		{8CB5381A-9681-4829-BEFD-6B4B590F4449}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F644D8C6-EA69-478F-B5C1-FF4950245E5A}
+	EndGlobalSection
+EndGlobal

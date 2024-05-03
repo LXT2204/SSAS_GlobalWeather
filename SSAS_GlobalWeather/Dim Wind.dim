@@ -1,0 +1,159 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e207a9b4-b417-4912-a4e1-653086e44d00" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Wind</ID>
+  <Name>Dim Wind</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="30cbcf1d-fff8-4623-8ba8-5851eee3a21d">
+    <DataSourceViewID>Global Weather</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="a945bfae-1c43-4d19-af85-c9e78ae4fc1d">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="499b0c4a-4223-4259-b009-4116eba589e0">
+      <ID>Id Wind</ID>
+      <Name>Id Wind</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e51f5293-b266-4497-a223-5df062c824bc">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1c73341e-b70c-4aff-91ee-a1eb0d9a98c1">
+            <TableID>dbo_dim_wind</TableID>
+            <ColumnID>id_wind</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="2a23fac1-5a68-4750-b46a-b44502fbd78a">
+          <AttributeID>Wind Kph</AttributeID>
+          <Name>Wind Kph</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="300f0861-bf51-47f6-b586-1f5e2d395b61">
+          <AttributeID>Wind Degree</AttributeID>
+          <Name>Wind Degree</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1ac69b84-d80a-48fd-b8e9-80e37d34ad59">
+          <AttributeID>Wind Direction</AttributeID>
+          <Name>Wind Direction</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0de738be-6f4e-4a05-949f-b54fc32ee105">
+          <AttributeID>Gust Kph</AttributeID>
+          <Name>Gust Kph</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8993c75e-a5f4-4535-850d-b08d1dfcf7a1">
+      <ID>Wind Kph</ID>
+      <Name>Wind Kph</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="16376214-f707-4e10-aeee-6ec51448934f">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e391452d-8fb4-44d4-821b-f0d0b57cd761">
+            <TableID>dbo_dim_wind</TableID>
+            <ColumnID>wind_kph</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="90947196-9ddf-4761-b2d2-0ed00e7214dc">
+      <ID>Wind Degree</ID>
+      <Name>Wind Degree</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="04c5d73b-86c7-4ef2-97d2-55e6cba6a22d">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="00f4514c-7c9d-418b-915c-ff856f3ccd14">
+            <TableID>dbo_dim_wind</TableID>
+            <ColumnID>wind_degree</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="76d18c2e-601c-428a-b6eb-d92704713315">
+      <ID>Wind Direction</ID>
+      <Name>Wind Direction</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="92df7684-9282-474b-87c3-ea2513d40209">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="827509b3-c832-42de-acaa-8dc3624963ab">
+            <TableID>dbo_dim_wind</TableID>
+            <ColumnID>wind_direction</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="31024698-35b4-46db-a922-ee6c64955b20">
+      <ID>Gust Kph</ID>
+      <Name>Gust Kph</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e8ada595-912a-46f5-bc86-06003ce6c21d">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="801dd9ea-85f5-48bb-aee3-37809642dca7">
+            <TableID>dbo_dim_wind</TableID>
+            <ColumnID>gust_kph</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

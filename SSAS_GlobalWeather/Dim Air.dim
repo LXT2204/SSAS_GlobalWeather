@@ -1,0 +1,198 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3e031f11-bba7-4c2d-910e-82c6114e3963" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Air</ID>
+  <Name>Dim Air</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="065eb9f9-7315-4013-af3f-eaae05149bed">
+    <DataSourceViewID>Global Weather</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="2e80763c-76fc-4f47-a8d7-370d0373902c">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="0ae8690e-9907-4a46-aae9-b4c98db8336c">
+      <ID>Id Air</ID>
+      <Name>Id Air</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="42db89d3-1957-488f-961d-c930afad550e">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e384782e-6eb7-42f7-9cd5-d925957b079d">
+            <TableID>dbo_dim_air</TableID>
+            <ColumnID>id_air</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d801ed09-c8e6-465b-96e3-33a55a17d5f8">
+          <AttributeID>Air Quality Carbon Monoxide</AttributeID>
+          <Name>Air Quality Carbon Monoxide</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="90264331-1179-42db-b781-8d8fec637124">
+          <AttributeID>Air Quality Ozone</AttributeID>
+          <Name>Air Quality Ozone</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a7dbf704-fb28-44f5-bbfa-dbc67008582f">
+          <AttributeID>Air Quality Nitrogen Dioxide</AttributeID>
+          <Name>Air Quality Nitrogen Dioxide</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d4d83d93-00eb-4d58-803b-709d628bf905">
+          <AttributeID>Air Quality Sulphur Dioxide</AttributeID>
+          <Name>Air Quality Sulphur Dioxide</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9bc511cb-2d84-4c01-846f-6268fc5a8979">
+          <AttributeID>Air Quality PM2#5</AttributeID>
+          <Name>Air Quality PM2#5</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="69835098-9da8-4994-acd4-4e75ea5f7e18">
+          <AttributeID>Air Quality PM10</AttributeID>
+          <Name>Air Quality PM10</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="616d7854-e994-454f-90a4-038e52db6634">
+      <ID>Air Quality Carbon Monoxide</ID>
+      <Name>Air Quality Carbon Monoxide</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e4df1884-6641-4312-a6d2-564c01f39b1f">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dd2b627d-14e5-4efc-960c-603e0ed76085">
+            <TableID>dbo_dim_air</TableID>
+            <ColumnID>air_quality_Carbon_Monoxide</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="43053dae-10c2-4e42-97c3-d975b975ddfd">
+      <ID>Air Quality Ozone</ID>
+      <Name>Air Quality Ozone</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a9134cd9-62fb-41cb-bddc-b9ead7ae928e">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9a1e0785-8dec-4a8a-ae20-9a54c6cde515">
+            <TableID>dbo_dim_air</TableID>
+            <ColumnID>air_quality_Ozone</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4fab0173-bbc4-44be-a756-9ff8b6c423dd">
+      <ID>Air Quality Nitrogen Dioxide</ID>
+      <Name>Air Quality Nitrogen Dioxide</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6d9a9677-07b6-4e71-b038-1ba1be3b3e36">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1ec1cead-82a1-421b-b7ec-0650509b7a1e">
+            <TableID>dbo_dim_air</TableID>
+            <ColumnID>air_quality_Nitrogen_dioxide</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9b9527f5-90bf-4875-b03c-dc87332d8c93">
+      <ID>Air Quality Sulphur Dioxide</ID>
+      <Name>Air Quality Sulphur Dioxide</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="813570d3-3352-4249-9b21-2097d1b38525">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c79df0ec-3e78-4ffe-860e-36af253370cd">
+            <TableID>dbo_dim_air</TableID>
+            <ColumnID>air_quality_Sulphur_dioxide</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9679e633-593d-4dcc-bf95-b38c3b872347">
+      <ID>Air Quality PM2#5</ID>
+      <Name>Air Quality PM2#5</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c615b172-46a3-4d21-b0de-34bde623439c">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="60fdff28-a39d-47f3-83f1-6117893078f5">
+            <TableID>dbo_dim_air</TableID>
+            <ColumnID>air_quality_PM2_x0023_5</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="aba64b38-b001-4524-b3ac-e0af0b27b327">
+      <ID>Air Quality PM10</ID>
+      <Name>Air Quality PM10</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d30db06e-87aa-42e9-84cc-999ecb9c87a0">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="79079fd0-ac37-41d4-8739-04fbfaf52d27">
+            <TableID>dbo_dim_air</TableID>
+            <ColumnID>air_quality_PM10</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
