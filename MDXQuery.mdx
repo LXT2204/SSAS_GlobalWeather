@@ -1,0 +1,76 @@
+--Truy van 1
+SELECT 
+  NON EMPTY  [Measures].[Fact Global Weather Count] ON COLUMNS,
+   NON EMPTY [dim temperature].[condition text].[condition text] ON ROWS
+FROM 
+    [Global Weather];
+
+--Truy van 2
+SELECT
+    Non EMPTY {[Measures].[Sum Uv Index]} ON COLUMNS,
+   NON EMPTY {[Dim Time].[Year].[year]} ON ROWS
+FROM [Global Weather]
+WHERE ([dim location].[country].&[Vietnam]);
+--Truy van 3
+SELECT 
+	NON EMPTY [Measures].[Sum Uv Index]  ON COLUMNS,
+   NON EMPTY TOPSUM([Dim Location].[Country].CHILDREN,1,[Measures].[Sum Uv Index]) ON ROWS
+FROM 
+    [Global Weather]
+Where [Dim Time].[Year].&[2023];
+--Truy van 4
+SELECT
+NON EMPTY  [Measures].[Avg Uv Index] ON COLUMNS,
+NON EMPTY Filter([Dim Location].[Country].[Country],[Dim Rain].[Pressure Mb]>0) ON ROWS
+FROM
+    [Global Weather];
+--Truy van 5
+WITH MEMBER [Measures].[TemperatureDifferencePercent] AS
+        ([Measures].[Sum Uv Index]/SUM([Dim Location].[Country].[Country],[Measures].[Sum Uv Index])),
+		Format_string='Percent'
+SELECT
+   NON EMPTY [Dim Location].[Country].[Country] ON Rows,
+   NON EMPTY [Measures].[TemperatureDifferencePercent] ON Columns
+FROM
+    [Global Weather]
+Where 
+[Dim Time].[Year].&[2023];
+--Truy van 6
+
+SELECT NON EMPTY { [Measures].[Avg Uv Index] } ON COLUMNS, 
+NON EMPTY { ([Dim Location].[Latitude].[Latitude].ALLMEMBERS * [Dim Location].[Longitude].[Longitude].ALLMEMBERS * [Dim Temperature].[Temperature Celsius].[Temperature Celsius].ALLMEMBERS * [Dim Wind].[Wind Kph].[Wind Kph].ALLMEMBERS ) } 
+ ON ROWS 
+FROM ( SELECT ( { [Dim Location].[Country].&[Vietnam] } ) ON COLUMNS 
+FROM [Global Weather]) 
+WHERE ( [Dim Location].[Country].&[Vietnam] );
+--Truy van 7
+
+ SELECT NON EMPTY { [Measures].[Fact Global Weather Count] } ON COLUMNS, 
+ NON EMPTY { DrillDownLevel(DrillDownLevel(([Dim Time].[Phancaptheothoigian]))
+ * [Dim Temperature].[Condition Text].[Condition Text].ALLMEMBERS ) }  ON ROWS 
+ FROM ( SELECT ( [TongDieuKienThoiTietXuatHienNhieuNhat] ) ON COLUMNS 
+ FROM [Global Weather]);
+--Truy van 8
+
+SELECT NON EMPTY { [Measures].[Avg Uv Index], [Measures].[Sum Uv Index] } ON COLUMNS, 
+ NON EMPTY { ([Dim Time].[Phancaptheothoigian].[Month].ALLMEMBERS ) } 
+ ON ROWS 
+ FROM [Global Weather];
+--Truy van 9
+
+ SELECT NON EMPTY { [Measures].[Avg Uv Index] } ON COLUMNS,
+ NON EMPTY { ([Dim Location].[Phancaptheodiali].[Location Name].ALLMEMBERS ) } 
+ ON ROWS FROM ( SELECT ( [UVtrungBinhHon5] ) ON COLUMNS 
+ FROM ( SELECT ( [TongUVINDEXCaoNhatNam] ) ON COLUMNS 
+ FROM [Global Weather])) ;
+--Truy van 10
+
+ SELECT NON EMPTY { [Measures].[Avg Uv Index] } ON COLUMNS,
+ NON EMPTY { Intersect(
+ {Filter([Dim Air].[Air Quality Ozone].[Air Quality Ozone],[Measures].[Avg Uv Index]>5)},
+  {Filter([Dim Air].[Air Quality Ozone].[Air Quality Ozone],[Measures].[Avg Uv Index]<10)}
+ )
+ }
+ ON ROWS 
+ FROM [Global Weather]
+
